@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>webmention.v01</string>
+	<key>connections</key>
+	<dict>
+		<key>4CE8EA71-6BFF-41E3-B74D-838485731F76</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>35D84871-5AD9-4733-B0CC-D3F3DEE618A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Matthias Pfefferle</string>
+	<key>description</key>
+	<string>Send Webmentions</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Webmention</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>wm</string>
+				<key>runningsubtext</key>
+				<string>Wait while I check the URL...</string>
+				<key>script</key>
+				<string>php -f mention.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Send a Webmention</string>
+				<key>title</key>
+				<string>Send a Webmention</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4CE8EA71-6BFF-41E3-B74D-838485731F76</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>curl -i -d {query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>35D84871-5AD9-4733-B0CC-D3F3DEE618A2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1360287C-09E0-4EBB-B947-A665570A852A</key>
+		<dict>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>2462D8E4-9B29-4130-9403-C44C4378EC33</key>
+		<dict>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>34F4B840-B645-4229-BC58-F039551D8BAB</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>35D84871-5AD9-4733-B0CC-D3F3DEE618A2</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>4CE8EA71-6BFF-41E3-B74D-838485731F76</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>82CCC89D-F412-4F34-A8CE-9FE190428290</key>
+		<dict>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>AE166042-F8CC-455E-844D-B53683EDE470</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>F07EBBB5-D074-409C-85F4-1576BC60F181</key>
+		<dict>
+			<key>ypos</key>
+			<real>80</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://notizblog.org/</string>
+</dict>
+</plist>
