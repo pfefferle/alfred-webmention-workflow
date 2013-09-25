@@ -19,7 +19,7 @@ if (count($parts) == 1 && array_key_exists(0, $parts)) {
   } else {
     $w->result ( 'mention-lookup', '', 'wm <target>', 'Check if URL supports Webmentions', 'icon.png', 'no' );
   }
-  $w->result ( 'mention-send', '', 'wm <target> <source>', 'Send a Webmention', 'icon.png', 'no' );
+  $w->result ( 'mention-send', '', 'wm '.$parts[0].' <source>', 'Send a Webmention', 'icon.png', 'no' );
 }
 
 // webmention part
@@ -35,10 +35,10 @@ if (count($parts) >= 2) {
                    $parts[0] . " " . $parts[1]
                  );
     } else {
-      $w->result ( 'mention-send', '', 'Sorry, '.$parts[0].' doesn\'t support Webmentions', 'Try another url', 'icon.png', 'no' );
+      $w->result ( 'mention-send', '', 'NO!', $parts[0].' doesn\'t support Webmentions', 'icon.png', 'no' );
     }
   } else {
-    $w->result ( 'mention-send', '', 'wm <source> <target>', 'Send a Webmention', 'icon.png', 'no', $parts[0] . " " . $parts[1] );
+    $w->result ( 'mention-send', '', 'wm '.$parts[0].' '.$parts[1], 'Send a Webmention', 'icon.png', 'no', $parts[0] . " " . $parts[1] );
   }
 }
 
